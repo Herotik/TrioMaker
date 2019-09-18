@@ -1,0 +1,60 @@
+.section-mentions h1 {
+    font-weight: bold;
+    font-size: 1.75rem;
+    padding-top:2vh;
+}
+
+.section-mentions p {
+    font-size: 1rem;
+    
+}
+
+.titleMentions h1{
+    font-size: 3rem;
+    text-align:center;
+}
+
+.titleIndiv{
+    text-align: left;
+}
+
+.titleMentions{
+    margin-bottom:10vh;
+    margin-top:5vh;
+}
+
+.section-editors{
+
+    background: rgba(0,0,0,0.85);
+    padding-top:1vh;
+    padding-bottom:0;
+    position:fixed;
+    bottom:0;
+}
+
+.section-editors h1{
+    font-size:1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.section-editors p{
+    font-size:1rem;
+    color:#C1D72E;
+}
+
+.rowEditors{
+    margin:0;
+    padding:0;
+    
+}
+
+.boutonAcordion{
+    width:100%;
+    border-color:#C1D72E;
+    text-align:left;
+}
+
+.corpsArticles{
+    text-align:left;
+}

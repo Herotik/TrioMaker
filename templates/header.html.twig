@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+<div id="circularMenu" class="circular-menu">
+
+        <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+        <i class="centerIcon fas fa-share-alt"></i>
+        </a>
+      
+        <menu class="items-wrapper">
+          <a href="#" class="menu-item fab fa-facebook-f"></a>
+          <a href="#" class="menu-item fab fa-twitter"></a>
+          <a href="#" class="menu-item fab fa-google-plus"></a>
+          <a href="#" class="menu-item fab fa-linkedin"></a>
+        </menu>
+      
+      </div>
+      
+      
+      <div id="circularMenu1" class="circular-menu circular-menu-left active">
+      
+        <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+          <i class="centerIcon fa fa-bars"></i>
+        </a>
+      
+        <menu class="items-wrapper">
+          <a href="#" class="menu-item fa fa-home"></a>
+          <a href="#" class="menu-item fa fa-user"></a>
+          <a href="#" class="menu-item fa fa-chart-pie"></a>
+          <a href="#" class="menu-item fa fa-cog"></a>
+          <a href="#" class="menu-item fas fa-sign-out-alt"></a>
+        </menu>
+      
+      </div>
+
+      <header id="barreDeTitre">
+        <div class="container">
+          <div class="row justify-content-center">
+            <h1>Bienvenue sur Fortnite Gather</h1>
+          </div>
+        </div>
+      </header>
+{% endblock %}
+
+{% block body %}
+{% endblock %}

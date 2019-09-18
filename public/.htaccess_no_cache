@@ -1,0 +1,43 @@
+DirectoryIndex index.php
+Options -Indexes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
+    RewriteRule ^(.*) - [E=BASE:%1]
+
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    RewriteCond %{ENV:REDIRECT_STATUS} ^$
+    RewriteRule ^index\.php(?:/(.*)|$) %{ENV:BASE}/$1 [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    RewriteRule ^ %{ENV:BASE}/index.php [L]
+</IfModule>
+<IfModule mod_expires.c>
+# Turn on the module.
+ExpiresActive on
+ExpiresByType text/javascript "access plus 1 seconds"
+ExpiresByType application/javascript "access plus 1 seconds"
+ExpiresByType application/x-shockwave-flash "access plus 1 seconds"
+ExpiresByType text/css "now plus 1 seconds"
+ExpiresByType image/ico "access plus 1 seconds"
+ExpiresByType image/x-icon "access plus 1 seconds"
+ExpiresByType text/html "access plus 1 seconds"
+</IfModule>
+
+
+<IfModule mod_headers.c>
+
+<FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+<FilesMatch "\\.(js)$">
+Header set Cache-Control "max-age=1, private"
+</FilesMatch>
+
+
+</IfModule>

@@ -1,0 +1,103 @@
+
+
+.active{
+  display:block;
+}
+.bg-gradient {
+    background: #C9D6FF;
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+  }
+
+  .pricing-divider {
+    border-radius: 20px;
+    background: #C64545;
+    padding: 1em 0 4em;
+    position: relative;
+  }
+
+
+  .grey .pricing-divider {
+    background: #959398;
+  background: -moz-radial-gradient(center, ellipse cover, #C1D72E 0%, #959398 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #C1D72E), color-stop(100%, #959398));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #C1D72E 0%, #959398 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #C1D72E 0%, #959398 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #C1D72E 0%, #959398 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, #C1D72E 0%, #959398 100%);
+  /* W3C */
+  background-size: 250% 250%;
+  }
+
+  .green .pricing-divider {
+    background: #C1D72E;
+    background: -moz-radial-gradient(center, ellipse cover, #959398 0%, #C1D72E 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #959398), color-stop(100%, #C1D72E));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #959398 0%, #C1D72E 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #959398 0%, #C1D72E 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #959398 0%, #C1D72E 100%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, #959398 0%, #C1D72E 100%);
+    /* W3C */
+    background-size: 250% 250%;
+  }
+
+  .red b {
+    color: #C64545
+  }
+
+  .grey b {
+    color: #939598
+  }
+
+  .green b {
+    color: #c1d72e
+  }
+
+  .pricing-divider-img {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+  }
+
+  .deco-layer {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
+
+  .img-float {
+    width: 50px;
+    position: absolute;
+    top: -3.5rem;
+    right: 1rem
+  }
+
+  .princing-item {
+    transition: all 150ms ease-out;
+  }
+
+  .princing-item:hover {
+    transform: scale(1.05);
+  }
+
+  .princing-item:hover .deco-layer--1 {
+    -webkit-transform: translate3d(15px, 0, 0);
+    transform: translate3d(15px, 0, 0);
+  }
+
+  .princing-item:hover .deco-layer--2 {
+    -webkit-transform: translate3d(-15px, 0, 0);
+    transform: translate3d(-15px, 0, 0);
+  }
+

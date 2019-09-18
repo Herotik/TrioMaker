@@ -1,0 +1,35 @@
+.fixed-table-body{
+	height:50vh;
+}
+
+.colonneAction{
+	min-width:150px;
+}
+
+.fresh-table.dropdown-menu {
+	opacity : 1!important;
+	visibility: visible !important;
+}
+
+thead th {
+	font-size: 3em !important;
+	padding: 20px !important;
+  }
+
+  .bordered-top{
+	  border-top:double #dddddd;
+	  border-width : 15px;
+  }
+
+  #fresh-table{
+	width:100%;
+}
+
+.responsive-cell{
+	width:33%;
+}
+
+.actionContainer{
+	padding:0;
+	margin:0;
+}
