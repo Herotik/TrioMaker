@@ -10,7 +10,7 @@
 
             <li>
                 <time datetime="2014-07-20 0000">
-                  <span class="day">Recquis</span>
+                  <span class="day">P/R</span>
                   <span class="month">Mode</span>
                 </time>
                 <div class="info">
@@ -35,7 +35,7 @@
 
 					<li>
 						<time datetime="2014-07-20">
-							<span class="day">1</span>
+							<span class="day">1/2</span>
 							<span class="month">DUO</span>
 						</time>
 						<div class="info">
@@ -55,12 +55,12 @@
 
 					<li>
 						<time datetime="2014-07-20 2000">
-							<span class="day">1</span>
+							<span class="day">1/4</span>
 							<span class="month">SQUAD</span>
 						</time>
 						<div class="info">
-							<h2 class="title">Mouse0270's 24th Birthday!</h2>
-							<p class="desc">Bar Hopping in Erie, Pa.</p>
+							<h2 class="title">SNK | RAIVEEN ( 3200 <i style="color:red" class="fas fa-fire"></i> )</h2>
+							<p class="desc">Je prend trop cher tout seul venez m'aider.</p>
 							<ul>
 								<li style="width:33%;">1 <span class="glyphicon glyphicon-ok"></span></li>
 								<li style="width:34%;">3 <span class="fa fa-question"></span></li>
@@ -78,10 +78,8 @@
 
 					<li>
 						<time datetime="2014-07-31 1600">
-							<span class="day">2</span>
+							<span class="day">2/3</span>
 							<span class="month">TRIO</span>
-							<span class="year">2014</span>
-							<span class="time">4:00 PM</span>
 						</time>
 						<div class="info">
 							<h2 class="title">Disney Junior Live On Tour!</h2>
@@ -102,7 +100,7 @@
           
           <li>
               <time datetime="2014-07-20">
-                <span class="day">1</span>
+                <span class="day">1/2</span>
                 <span class="month">DUO</span>
               </time>
               <div class="info">
@@ -120,7 +118,7 @@
 
             <li>
                 <time datetime="2014-07-20">
-                  <span class="day">1</span>
+                  <span class="day">1/2</span>
                   <span class="month">DUO</span>
                 </time>
                 <div class="info">
@@ -138,8 +136,9 @@
 
               <li>
                   <time datetime="2014-07-20">
-                    <span class="day">1</span>
-                    <span class="month">DUO</span>
+                    {% set nbPerso = 6 %}
+                    <span class="day"><span style="font-weight:300;">&infin;</span></span>
+                    <span class="month">CREA</span>
                   </time>
                   <div class="info">
                     <h2 class="title">Padawan Hero ( 3200 <i style="color:red" class="fas fa-fire"></i> )</h2>
@@ -156,6 +155,17 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="wrapper"></div>
+    </div>
+  </div>
+  
 <!--BODY BLOCK-->
+{% endblock %}
+{% block javascripts %}
+
+{{ encore_entry_script_tags('accueil') }}
+
 {% endblock %}

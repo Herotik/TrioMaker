@@ -116,11 +116,11 @@ body {
   }
   
   .circular-menu.circular-menu-left .floating-btn {
-	background-color: hsl(217, 89%, 61%);
+	background-color: hsla(199, 93%, 42%, 1)
   }
   
   .circular-menu.circular-menu-left:after {
-	background-color: hsl(217, 89%, 61%);
+	background-color: hsla(199, 93%, 42%, 1)
   }
   
   .circular-menu.circular-menu-left.active .floating-btn i {

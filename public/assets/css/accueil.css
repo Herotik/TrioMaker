@@ -1,8 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
-body {
-    background-color: rgb(220, 220, 220);
-}
+
+
 
 .event-list {
     list-style: none;
@@ -21,13 +20,13 @@ body {
     display: inline-block;
     width: 100%;
     color: rgb(255, 255, 255);
-    background-color:#f20039;
+    background-color:#0892D0;
     padding: 5px;
     text-align: center;
     text-transform: uppercase;
 }
 .event-list > li:nth-child(even) > time {
-    background-color: #1800ed
+    background-color: #000000
 }
 .event-list > li > time > span {
     display: none;
