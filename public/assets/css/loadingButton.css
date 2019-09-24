@@ -11,6 +11,7 @@ body {
     flex-wrap: wrap;
     width: 1px;
     height: 100vh;
+    z-index: 9999;
   }
 
   .el {
