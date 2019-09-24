@@ -4,6 +4,7 @@ body {
 	background-color: #EDEDED;
   }
   .circular-menu {
+	z-index: 9999;
 	position: fixed;
 	top: 8em;
 	right: 1em;
@@ -60,7 +61,6 @@ body {
   }
   
   .circular-menu .items-wrapper {
-	z-index: 9999;
 	padding: 0;
 	margin: 0;
   }
