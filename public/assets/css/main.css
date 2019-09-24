@@ -60,6 +60,7 @@ body {
   }
   
   .circular-menu .items-wrapper {
+	z-index: 9999;
 	padding: 0;
 	margin: 0;
   }

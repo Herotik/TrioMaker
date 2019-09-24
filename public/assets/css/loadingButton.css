@@ -11,11 +11,9 @@ body {
     flex-wrap: wrap;
     width: 1px;
     height: 100vh;
-    z-index: 9999;
   }
 
   .el {
-    z-index: 9999;
     position: absolute;
     opacity: 1;
     width: 1px;
