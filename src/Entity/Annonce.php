@@ -27,7 +27,7 @@ class Annonce
     private $description;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\modeDeJeu", inversedBy="annonce")
+     * @ORM\ManyToOne(targetEntity="App\Entity\ModeDeJeu", inversedBy="annonce")
      * @ORM\JoinColumn(nullable=false)
      */
     private $modeDeJeu;
