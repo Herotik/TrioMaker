@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -25,6 +27,17 @@ class ModeDeJeu
      * @ORM\Column(type="integer", nullable=true)
      */
     private $joueurMax;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Annonce", mappedBy="modeDeJeu")
+     */
+    private $modeDeJeu;
+
+    public function __construct()
+    {
+        $this->annonce = new Annonce();
+        $this->modeDeJeu = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -51,6 +64,37 @@ class ModeDeJeu
     public function setJoueurMax(?int $joueurMax): self
     {
         $this->joueurMax = $joueurMax;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Annonce[]
+     */
+    public function getModeDeJeu(): Collection
+    {
+        return $this->modeDeJeu;
+    }
+
+    public function addModeDeJeu(Annonce $modeDeJeu): self
+    {
+        if (!$this->modeDeJeu->contains($modeDeJeu)) {
+            $this->modeDeJeu[] = $modeDeJeu;
+            $modeDeJeu->setModeDeJeu($this);
+        }
+
+        return $this;
+    }
+
+    public function removeModeDeJeu(Annonce $modeDeJeu): self
+    {
+        if ($this->modeDeJeu->contains($modeDeJeu)) {
+            $this->modeDeJeu->removeElement($modeDeJeu);
+            // set the owning side to null (unless already changed)
+            if ($modeDeJeu->getModeDeJeu() === $this) {
+                $modeDeJeu->setModeDeJeu(null);
+            }
+        }
 
         return $this;
     }

@@ -27,19 +27,32 @@ class Annonce
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\modeDeJeu", inversedBy="annonce")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $mode;
+    private $modeDeJeu;
+
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\plateforme", inversedBy="annonce")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $joueurRequis;
+    private $plateforme;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
     private $cote;
+
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $pseudo;
+
+
+
+    
 
     public function getId(): ?int
     {
@@ -82,18 +95,6 @@ class Annonce
         return $this;
     }
 
-    public function getJoueurRequis(): ?string
-    {
-        return $this->joueurRequis;
-    }
-
-    public function setJoueurRequis(string $joueurRequis): self
-    {
-        $this->joueurRequis = $joueurRequis;
-
-        return $this;
-    }
-
     public function getCote(): ?int
     {
         return $this->cote;
@@ -102,6 +103,42 @@ class Annonce
     public function setCote(?int $cote): self
     {
         $this->cote = $cote;
+
+        return $this;
+    }
+
+    public function getModeDeJeu(): ?modeDeJeu
+    {
+        return $this->modeDeJeu;
+    }
+
+    public function setModeDeJeu(?modeDeJeu $modeDeJeu): self
+    {
+        $this->modeDeJeu = $modeDeJeu;
+
+        return $this;
+    }
+
+    public function getPseudo(): ?string
+    {
+        return $this->pseudo;
+    }
+
+    public function setPseudo(string $pseudo): self
+    {
+        $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    public function getPlateforme(): ?plateforme
+    {
+        return $this->plateforme;
+    }
+
+    public function setPlateforme(?plateforme $plateforme): self
+    {
+        $this->plateforme = $plateforme;
 
         return $this;
     }
