@@ -16,8 +16,10 @@
 </div>
 
 <div class="container mt-5">
+  <div class="row justify-content-center">
+      <h2 class="mb-3">Liste des groupes en cours de création :</h2>
+  </div>
 		<div class="row justify-content-center">
-        <h2 class="mb-3">Liste des groupes en cours de création :</h2>
 			<div class="[ col-xs-12 col-sm-8  col-md-10 col-lg-10 ]">
 				<ul class="event-list">
           {% for add in listAnnonce %}
@@ -48,12 +50,13 @@
 			</div>
 		</div>
   </div>
+  <!--   LOADER TROP STYLEEE
   <div class="container">
     <div class="row justify-content-center">
       <div class="wrapper"></div>
     </div>
   </div>
-  
+  -->
 <!--BODY BLOCK-->
 {% endblock %}
 {% block javascripts %}
