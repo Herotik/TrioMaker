@@ -4,8 +4,8 @@
 {% endblock %}
 {% block body %}
 <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="[ col-xs-12 col-sm-8  col-md-10 col-lg-10 ]">
+  <div class="row">
+    <div class="[ col-xs-12 col-sm-8  col-md-10 col-lg-10 ] align-self-center">
     {{ form_start(formCreationAnnonce) }}
     <button class="btn btn-info" type="submit">
       Poster l'annonce
@@ -16,9 +16,9 @@
 </div>
 
 <div class="container mt-5">
-		<div class="row justify-content-center">
+		<div class="row">
         <h2 class="mb-3">Liste des groupes en cours de création :</h2>
-			<div class="[ col-xs-12 col-sm-8  col-md-10 col-lg-10 ]">
+			<div class="[ col-xs-12 col-sm-8  col-md-10 col-lg-10 ] align-self-center">
 				<ul class="event-list">
           {% for add in listAnnonce %}
             <li>
@@ -49,8 +49,10 @@
 		</div>
   </div>
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="wrapper"></div>
+    <div class="row">
+      <div class="col align-self-center">
+          <div class="wrapper"></div>
+      </div>
     </div>
   </div>
   

@@ -162,4 +162,7 @@ body {
 	background-color:black;
 	color:#0892D0;
 	font-family: 'Audiowide', cursive;
+	height:150px;
+	display: flex;
+    align-items: center;
 }
