@@ -43,6 +43,12 @@ class SiteController extends Controller
        if (!$annonce) {
         $annonce = new Annonce();
     }
+
+    $listAnnonce = $this->getDoctrine()
+        ->getRepository(Annonce::class)
+        ->findAll();
+
+
     $form = $this->createFormBuilder($annonce)
         ->add('titre')
         ->add('modeDeJeu', EntityType::class, [
@@ -70,6 +76,7 @@ class SiteController extends Controller
         return $this->render(
             'site/accueil.html.twig',array(
             'formCreationAnnonce' => $form->createView(),
+            'listAnnonce' => $listAnnonce
             ),$response);
     }
 }

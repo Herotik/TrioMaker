@@ -7,6 +7,7 @@
   <div class="row justify-content-center">
     <div class="[ col-xs-12 col-sm-8  col-md-10 col-lg-10 ]">
     {{ form_start(formCreationAnnonce) }}
+    <!-- {{ form_row(formCreationOffre.typeContrat) }} -->
     <button class="btn btn-success" type="submit">
       Poster l'annonce
     </button>
@@ -17,19 +18,21 @@
 
 <div class="container mt-5">
 		<div class="row justify-content-center">
+        <h2>Liste des graoupes en création :</h2>
 			<div class="[ col-xs-12 col-sm-8  col-md-10 col-lg-10 ]">
 				<ul class="event-list">
+          {% for add in listAnnonce %}
             <li>
                 <time datetime="2014-07-20 0000">
-                  <span class="day">P/R</span>
-                  <span class="month">Mode</span>
+                  <span class="day">{{1}}/add.modeDeJeu.joueurMax</span>
+                  <span class="month">{{add.modeDeJeu.libelle}}</span>
                 </time>
                 <div class="info">
-                  <h2 class="title">Pseudo ( côte <i style="color:red" class="fas fa-fire"></i> )</h2>
-                  <p class="desc">Message ou précisions</p>
+                  <h2 class="title">{{add.pseudo}} ( {{add.cote}} <i style="color:red" class="fas fa-fire"></i> )</h2>
+                  <p class="desc">{{add.description}}</p>
                   <ul>
-                    <li style="width:50%;"><a href="#website"><span class="fa fa-globe"></span> Website</a></li>
-                    <li style="width:50%;"><span class="fa fa-money"></span> $39.99</li>
+                    <li style="width:50%;"><a href="#website"><span class="fa fa-globe"></span> Voir stats </a></li>
+                    <li style="width:50%;"><span class="fa fa-money"></span> Ajouter relation </li>
                   </ul>
                 </div>
                 <div class="social">
@@ -40,6 +43,8 @@
                   </ul>
                 </div>
               </li>
+
+            {% end for %}
 
 
 
