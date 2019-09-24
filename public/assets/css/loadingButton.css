@@ -15,6 +15,7 @@ body {
   }
 
   .el {
+    z-index: 9999;
     position: absolute;
     opacity: 1;
     width: 1px;
