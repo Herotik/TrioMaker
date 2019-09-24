@@ -86,7 +86,7 @@ class SiteController extends Controller
         }
         $form = $this->createFormBuilder($annonce)
             ->add('title')
-            ->add('mode', EntityType::class, [
+            ->add('modeDeJeu', EntityType::class, [
                 'class' => ModeDeJeu::class,
                 'choice_label' => 'libelle'
             ])

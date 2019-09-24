@@ -50,10 +50,6 @@ class Annonce
      */
     private $pseudo;
 
-
-
-    
-
     public function getId(): ?int
     {
         return $this->id;
@@ -79,18 +75,6 @@ class Annonce
     public function setDescription(string $description): self
     {
         $this->description = $description;
-
-        return $this;
-    }
-
-    public function getMode(): ?string
-    {
-        return $this->mode;
-    }
-
-    public function setMode(string $mode): self
-    {
-        $this->mode = $mode;
 
         return $this;
     }
