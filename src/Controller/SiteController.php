@@ -45,7 +45,7 @@ class SiteController extends Controller
     }
     $form = $this->createFormBuilder($annonce)
         ->add('titre')
-        ->add('mode', EntityType::class, [
+        ->add('modeDeJeu', EntityType::class, [
             'class' => ModeDeJeu::class,
             'choice_label' => 'libelle'
         ])
@@ -71,45 +71,5 @@ class SiteController extends Controller
             'site/accueil.html.twig',array(
             'formCreationAnnonce' => $form->createView(),
             ),$response);
-    }
-
-
-    /**_________________________________________________________________________________________________________________________________________________________________CREATE/EDIT OFFRE */
-    /**
-     * @Route("/annonce/new", name="annonce_creation")
-     * @Route("/annonce/{id}/edit", name="annonce_edition")
-     */
-    public function manipulationOffre(Offre $offre = null, Request $request, ObjectManager $manager, UserInterface $user = null, \Swift_Mailer $mailer)
-    {
-        if (!$annonce) {
-            $annonce = new Annonce();
-        }
-        $form = $this->createFormBuilder($annonce)
-            ->add('title')
-            ->add('modeDeJeu', EntityType::class, [
-                'class' => ModeDeJeu::class,
-                'choice_label' => 'libelle'
-            ])
-            ->add('description', TextareaType::class)
-            ->add('plateforme', EntityType::class, [
-                'class' => Plateforme::class,
-                'choice_label' => 'libelle'
-            ])
-            ->add('cote')
-            ->add('pseudo')
-            //->add('save', SubmitType::class, ['label' => 'Créer'])
-            ->getForm();
-
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $manager->persist($annonce);
-            $manager->flush();
-
-            return $this->redirectToRoute('accueil');
-        }
-        return $this->render('site/creationOffre.html.twig', [
-            'formCreationOffre' => $form->createView(),
-            'editMode' => $offre->getId() !== null
-        ]);
     }
 }
