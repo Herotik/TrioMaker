@@ -35,7 +35,7 @@ class SiteController extends Controller
      * @Route("/", name="accueil")
      */
 
-    public function home(UserInterface $user = null, Request $request)
+    public function home(UserInterface $user = null, Annonce $annonce = null, Request $request, ObjectManager $manager)
     {
         $dejaVu = $request->cookies->has("popup_first_visit");
        $response = new Response();
