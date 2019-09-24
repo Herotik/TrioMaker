@@ -2,9 +2,10 @@ import anime from '../../../node_modules/animejs/lib/anime.min.js'
 $(document).ready(function () {
 
 
-  if(document.querySelector('.wrapper')){
+  
 
     const wrapperEl = document.querySelector('.wrapper');
+    if(wrapperEl){
     const numberOfEls = 90;
     const duration = 6000;
     const delay = duration / numberOfEls;
