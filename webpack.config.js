@@ -27,6 +27,7 @@ Encore
     //.addEntry('tab', './assets/js/tableaux.js')
     .addEntry('accueil', './assets/js/accueil.js')
     .addEntry('loader', './assets/js/loader.js')
+    .addEntry('three', './assets/js/three.js')
     //.addEntry('contact', './assets/js/contact.js')
     //.addEntry('login', './assets/js/login.js')
     //.addEntry('mentions', './assets/js/mentions.js')
