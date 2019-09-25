@@ -2,6 +2,11 @@
 {% block stylesheets %}
 {{ encore_entry_link_tags('three') }}
 {% endblock %}
+<style>canvas { 
+        height: 100vh; 
+        width: 100vw; 
+        display: block;
+      }</style>
 {% block body %}
 
 <div class="container">
@@ -15,23 +20,3 @@
 {% block javascripts %}
 {{ encore_entry_script_tags('three') }}
 {% endblock %}
-<script>
-    (function() {
-    var canvas = document.getElementById('canvas'),
-            context = canvas.getContext('2d');
-
-    // resize the canvas to fill browser window dynamically
-    window.addEventListener('resize', resizeCanvas, false);
-
-    function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-
-            /**
-             * Your drawings need to be inside this function otherwise they will be reset when 
-             * you resize the browser window and the canvas goes will be cleared.
-             */
-    }
-    resizeCanvas();
-})();
-</script>
