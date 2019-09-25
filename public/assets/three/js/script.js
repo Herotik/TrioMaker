@@ -408,4 +408,13 @@ function createTweenScrubber(tween, seekSpeed) {
       seek(dx);
     }
   });
+  // mobile
+  window.addEventListener('touchmove', function(e) {
+    var cx = e.touches[0].clientX;
+    var dx = cx - _cx;
+    _cx = cx;
+
+    seek(dx);
+    e.preventDefault();
+  });
 }
