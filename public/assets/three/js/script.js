@@ -1,5 +1,4 @@
-<script id="rendered-js">
-      window.onload = init;
+window.onload = init;
 console.ward = function () {}; // what warnings?
 
 function init() {
@@ -430,4 +429,3 @@ function createTweenScrubber(tween, seekSpeed) {
     e.preventDefault();
   });
 }
-    </script>
