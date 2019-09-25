@@ -2,14 +2,9 @@
 {% block stylesheets %}
 {{ encore_entry_link_tags('three') }}
 {% endblock %}
-<style>canvas { 
-        height: auto; 
-        width: 100vw; 
-        display: block;
-      }</style>
 {% block body %}
 
-<div class="container-fluid">
+<div class="container">
         <div id="three-container"> </div>
 </div>
 
@@ -20,3 +15,6 @@
 {% block javascripts %}
 {{ encore_entry_script_tags('three') }}
 {% endblock %}
+<script>
+    $(ctx.canvas).css("width", "100%");
+</script>
