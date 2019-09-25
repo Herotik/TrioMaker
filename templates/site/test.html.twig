@@ -3,7 +3,7 @@
 {{ encore_entry_link_tags('three') }}
 {% endblock %}
 {% block body %}
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
 
 <div id="three-container"> </div>
 
@@ -11,7 +11,7 @@
 
 {% endblock %}
 {% block javascripts %}
-
+{{ encore_entry_script_tags('threeBase') }}
 {{ encore_entry_script_tags('three') }}
 
 {% endblock %}
