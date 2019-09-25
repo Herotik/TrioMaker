@@ -9,7 +9,6 @@ function init() {
 
 
   root.renderer.setClearColor(0x000000, 0);
-  root.renderer.setPixelRatio(window.devicePixelRatio || 1);
   root.camera.position.set(0, 0, 60);
 
   var width = 100;
