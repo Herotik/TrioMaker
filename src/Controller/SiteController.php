@@ -79,4 +79,17 @@ class SiteController extends Controller
             'listAnnonce' => $listAnnonce
             ),$response);
     }
+
+
+
+    /**_____________________________________________________________________________________________________________________________________________________________HOME___________ */
+    /**
+     * @Route("/", name="test")
+     */
+
+    public function test(UserInterface $user = null, Annonce $annonce = null, Request $request, ObjectManager $manager)
+    {
+        return $this->render(
+            'site/test.html.twig',array());
+    }
 }
