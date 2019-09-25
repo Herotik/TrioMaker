@@ -16,9 +16,22 @@
 {{ encore_entry_script_tags('three') }}
 {% endblock %}
 <script>
-   var canvas = document.querySelector('canvas');
-   function fitToContainer(canvas){
-  canvas.style.width='100vw';
-  canvas.width  = canvas.offsetWidth;
+    (function() {
+    var canvas = document.getElementById('canvas'),
+            context = canvas.getContext('2d');
+
+    // resize the canvas to fill browser window dynamically
+    window.addEventListener('resize', resizeCanvas, false);
+
+    function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            /**
+             * Your drawings need to be inside this function otherwise they will be reset when 
+             * you resize the browser window and the canvas goes will be cleared.
+             */
     }
+    resizeCanvas();
+})();
 </script>
