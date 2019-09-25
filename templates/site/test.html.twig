@@ -13,6 +13,7 @@
 {{ encore_entry_script_tags('three') }}
 {% endblock %}
 <script>
+    $(document).ready(function () {
     let largeur = $('#three-container').width();
     function resize() {
         let canvas = document.getElementById('three-container').children();
@@ -21,4 +22,5 @@
         console.log(canvas.width());
     }
     resize();
+});
 </script>
