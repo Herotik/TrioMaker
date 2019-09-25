@@ -16,7 +16,7 @@
     $(document).ready(function () {
     let largeur = $('#three-container').width();
     function resize() {
-        let canvas = document.getElementById('three-container').children();
+        let canvas = document.getElementById('three-container').firstChild();
         console.log(canvas.html())
         canvas.width(largeur);
         console.log(canvas.width());
