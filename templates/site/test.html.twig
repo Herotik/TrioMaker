@@ -15,6 +15,6 @@
 <script>
     $(window).on('load', function() {
         let largeur = $('#three-container').width();
-        $('#three-container').children().width(largeur);
+        $('#three-container').children().removeAttr('style').width(largeur);
     });
 </script>
