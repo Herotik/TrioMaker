@@ -84,7 +84,7 @@ class SiteController extends Controller
 
     /**_____________________________________________________________________________________________________________________________________________________________HOME___________ */
     /**
-     * @Route("/", name="test")
+     * @Route("/test", name="test")
      */
 
     public function test(UserInterface $user = null, Annonce $annonce = null, Request $request, ObjectManager $manager)
