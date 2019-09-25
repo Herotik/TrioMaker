@@ -266,10 +266,9 @@ function THREERoot(params) {
   this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
   
   document.getElementById('three-container').appendChild(this.renderer.domElement);
-  document.getElementById('three-container').firstChild.offsetWidth = document.getElementById('three-container').offsetWidth
   this.camera = new THREE.PerspectiveCamera(
     params.fov,
-    window.innerWidth / window.innerHeight,
+    document.getElementById('three-container').innerWidth / document.getElementById('three-container').innerHeight,
     params.zNear,
     params.zfar
   );
