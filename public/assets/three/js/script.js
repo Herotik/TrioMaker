@@ -15,10 +15,12 @@ function init() {
   var width = 100;
   var height = 60;
 
+
+
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
 	l1.setCrossOrigin('Anonymous');
-	l1.load('../../../ressources/images/drake.png', function(img) {
+	l1.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/winter.jpg', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
@@ -26,7 +28,7 @@ function init() {
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
 	l2.setCrossOrigin('Anonymous');
-	l2.load('../../../ressources/images/seasonBG.jpg', function(img) {
+	l2.load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/spring.jpg', function(img) {
 		slide2.setImage(img);
 	})
 	
