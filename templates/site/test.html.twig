@@ -4,12 +4,15 @@
 {% endblock %}
 {% block body %}
 
+
         <div id="three-container"> </div>
-
-
 
 {% endblock %}
 <script src="./assets/three/js/three.min.js"></script>
 {% block javascripts %}
 {{ encore_entry_script_tags('three') }}
 {% endblock %}
+<script>
+    let largeur = $('#three-container').width();
+    alert(largeur);
+</script>
