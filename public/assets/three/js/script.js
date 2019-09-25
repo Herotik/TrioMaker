@@ -26,13 +26,13 @@ function init() {
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
 	l2.setCrossOrigin('Anonymous');
-	l2.load('../../../ressources/images/seasonBG.jpg', function(img) {
+	l2.load('../../../ressources/images/seasonBG.png', function(img) {
 		slide2.setImage(img);
 	})
 	
   root.scene.add(slide2);
 
-  var tl = new TimelineMax({repeat:-1, repeatDelay:3.0, yoyo: true});
+  var tl = new TimelineMax({repeat:-1, repeatDelay:1.0, yoyo: true});
 
   tl.add(slide.transition(), 0);
   tl.add(slide2.transition(), 0);
@@ -264,11 +264,11 @@ function THREERoot(params) {
     alpha: true
   });
   this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
-  
   document.getElementById('three-container').appendChild(this.renderer.domElement);
+
   this.camera = new THREE.PerspectiveCamera(
     params.fov,
-    document.getElementById('three-container').innerWidth / document.getElementById('three-container').innerHeight,
+    window.innerWidth / window.innerHeight,
     params.zNear,
     params.zfar
   );
