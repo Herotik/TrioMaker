@@ -13,7 +13,7 @@ function init() {
   root.camera.position.set(0, 0, 60);
 
   var width = 100;
-  var height = 40;
+  var height = 60;
 
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
@@ -264,8 +264,9 @@ function THREERoot(params) {
     alpha: true
   });
   this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+  document.getElementById('three-container').style.width = '50%';
   document.getElementById('three-container').appendChild(this.renderer.domElement);
-
+  
   this.camera = new THREE.PerspectiveCamera(
     params.fov,
     window.innerWidth / window.innerHeight,
