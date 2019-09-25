@@ -13,8 +13,8 @@
 {{ encore_entry_script_tags('three') }}
 {% endblock %}
 <script>
-    $(document).load(function () {
+    $(window).on('load', function() {
         let largeur = $('#three-container').width();
         $('#three-container').children().width(largeur);
-});
+    });
 </script>
