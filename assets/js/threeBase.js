@@ -1,1 +1,0 @@
-require('../../public/assets/three/js/three.min.js');
