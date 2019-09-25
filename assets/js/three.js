@@ -1,3 +1,6 @@
+//CSS
+require('../../public/assets/three/css/style.css');
+
 //JS
 
 require('../../public/assets/three/js/TweenMax.min.js');
