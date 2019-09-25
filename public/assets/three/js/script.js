@@ -264,7 +264,7 @@ function THREERoot(params) {
     alpha: true
   });
   this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
-  document.getElementById('three-container').style.width = '100%';
+  document.getElementById('three-container').children().style.width = document.getElementById('three-container').style.width
   document.getElementById('three-container').appendChild(this.renderer.domElement);
   
   this.camera = new THREE.PerspectiveCamera(
