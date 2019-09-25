@@ -23,12 +23,12 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .createSharedEntry('app','./assets/js/app.js')
-    //.addEntry('app', './assets/js/app.js')
+    .addEntry('app', './assets/js/app.js')
     //.addEntry('tab', './assets/js/tableaux.js')
     .addEntry('accueil', './assets/js/accueil.js')
     .addEntry('loader', './assets/js/loader.js')
     .addEntry('three', './assets/js/three.js')
+
     //.addEntry('contact', './assets/js/contact.js')
     //.addEntry('login', './assets/js/login.js')
     //.addEntry('mentions', './assets/js/mentions.js')
