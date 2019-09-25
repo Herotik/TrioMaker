@@ -14,6 +14,10 @@
 {% endblock %}
 <script>
     let largeur = $('#three-container').width();
-    alert(largeur);
-    //$('#three-container').children().width(largeur+" !important;");
+    function resize() {
+        let canvas = $('#three-container').children();
+        canvas.width(largeur);
+        console.log(canvas.width());
+    }
+    resize();
 </script>
