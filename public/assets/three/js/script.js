@@ -9,6 +9,7 @@ function init() {
   });
 
   root.renderer.setClearColor(0x000000, 0);
+  root.renderer.setPixelRatio(window.devicePixelRatio || 1);
   root.camera.position.set(0, 0, 60);
 
   var width = 100;
@@ -48,23 +49,6 @@ function init() {
 ////////////////////
 // CLASSES
 ////////////////////
-
-
-function detectmob() { 
-    if( navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)
-    ){
-       return true;
-     }
-    else {
-       return false;
-     }
-   }
 
 function Slide(width, height, animationPhase) {
   var plane = new THREE.PlaneGeometry(width, height, width * 2, height * 2);
@@ -279,6 +263,7 @@ function THREERoot(params) {
     antialias: params.antialias,
     alpha: true
   });
+  this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
   document.getElementById('three-container').appendChild(this.renderer.domElement);
 
   this.camera = new THREE.PerspectiveCamera(
