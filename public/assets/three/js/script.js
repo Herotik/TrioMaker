@@ -395,19 +395,21 @@ function createTweenScrubber(tween, seekSpeed) {
     document.body.style.cursor = 'ew-resize';
     _cx = e.clientX;
     stop();
+    e.preventDefault();
   });
   window.addEventListener('mouseup', function(e) {
     mouseDown = false;
     document.body.style.cursor = 'pointer';
     resume();
+    e.preventDefault();
   });
   window.addEventListener('mousemove', function(e) {
     if (mouseDown === true) {
       var cx = e.clientX;
       var dx = cx - _cx;
       _cx = cx;
-
       seek(dx);
+      e.preventDefault();
     }
   });
   // mobile a modifier sinon bloque la navigation
