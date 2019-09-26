@@ -262,6 +262,7 @@ function THREERoot(params) {
     antialias: params.antialias,
     alpha: true
   });
+  document.getElementById('three-container').children().classList.add("testClass");
   document.getElementById('three-container').appendChild(this.renderer.domElement);
 
   this.camera = new THREE.PerspectiveCamera(
