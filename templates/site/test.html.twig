@@ -5,9 +5,11 @@
 
 {% block body %}
 
-<div class="container" style="height:300px;">
-        <div id="three-container" style="height:100%"> </div>
-</div>
+    <iframe>
+            <div id="three-container"> </div>
+    </iframe>
+        
+
         
 
 {% endblock %}
@@ -15,8 +17,3 @@
 {% block javascripts %}
 {{ encore_entry_script_tags('three') }}
 {% endblock %}
-<script defer>
-document.onload = function () { 
-    $('#three-container').children().addClass("lalalalalalal");
- }
-</script>
