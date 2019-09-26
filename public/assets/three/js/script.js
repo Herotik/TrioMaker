@@ -413,20 +413,20 @@ function createTweenScrubber(tween, seekSpeed) {
     }
   });
   // mobile a modifier sinon bloque la navigation
-  window.addEventListener('touchstart', function(e) {
+  domElement.addEventListener('touchstart', function(e) {
     _cx = e.touches[0].clientX;
     stop();
     e.preventDefault();
   },{
       passive : false
   });
-  window.addEventListener('touchend', function(e) {
+  domElement.addEventListener('touchend', function(e) {
     resume();
     e.preventDefault();
   },{
     passive : false
 });
-  window.addEventListener('touchmove', function(e) {
+domElement.addEventListener('touchmove', function(e) {
     var cx = e.touches[0].clientX;
     var dx = cx - _cx;
     _cx = cx;
