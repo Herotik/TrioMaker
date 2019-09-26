@@ -432,7 +432,6 @@ document.getElementById('three-container').addEventListener('touchmove', functio
     _cx = cx;
 
     seek(dx);
-    e.preventDefault();
   },{
     passive : false
 });
