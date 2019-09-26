@@ -412,11 +412,9 @@ function createTweenScrubber(tween, seekSpeed) {
   window.addEventListener('touchstart', function(e) {
     _cx = e.touches[0].clientX;
     stop();
-    e.preventDefault();
   });
   window.addEventListener('touchend', function(e) {
     resume();
-    e.preventDefault();
   });
   window.addEventListener('touchmove', function(e) {
     var cx = e.touches[0].clientX;
