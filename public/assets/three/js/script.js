@@ -425,6 +425,5 @@ function createTweenScrubber(tween, seekSpeed) {
     _cx = cx;
 
     seek(dx);
-    e.preventDefault();
   });
 }
