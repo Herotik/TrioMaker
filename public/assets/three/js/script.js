@@ -300,10 +300,9 @@ THREERoot.prototype = {
   resize: function () {
     this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
-
-    this.renderer.setSize("100vw", "100vh");
-    console.log(window.innerWidth);
-    console.log(window.innerHeight);
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    this.renderer.setSize(w, h);
   }
 };
 
