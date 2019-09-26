@@ -36,7 +36,6 @@ class ModeDeJeu
     public function __construct()
     {
         $this->annonce = new Annonce();
-        $this->modeDeJeu = new ArrayCollection();
     }
 
     public function getId(): ?int
