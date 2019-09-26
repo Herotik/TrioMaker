@@ -298,9 +298,10 @@ THREERoot.prototype = {
     this.renderer.render(this.scene, this.camera);
   },
   resize: function () {
-    this.camera.aspect = documentElement.clientWidth / document.documentElement.clientHeight;
+    this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
-    this.renderer.setSize(documentElement.clientWidth,document.documentElement.clientHeight);
+
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
 };
 
@@ -411,6 +412,7 @@ function createTweenScrubber(tween, seekSpeed) {
   window.addEventListener('touchstart', function(e) {
     _cx = e.touches[0].clientX;
     stop();
+
   });
   window.addEventListener('touchend', function(e) {
     resume();
