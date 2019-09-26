@@ -17,15 +17,15 @@ function init() {
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
 	l1.setCrossOrigin('Anonymous');
-	l1.load('../../../ressources/images/drake.png', function(img) {
+	l1.load('../../../ressources/images/drake-mobile.png', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
 
   var slide2 = new Slide(width, height, 'in');
   var l2 = new THREE.ImageLoader();
-	l2.setCrossOrigin('Anonymous');
-	l2.load('../../../ressources/images/seasonBG.jpg', function(img) {
+    l2.setCrossOrigin('Anonymous');
+	l2.load('../../../ressources/images/seasonBG-mobile.jpg', function(img) {
 		slide2.setImage(img);
 	})
 	
@@ -48,6 +48,23 @@ function init() {
 ////////////////////
 // CLASSES
 ////////////////////
+
+
+function detectmob() { 
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)
+    ){
+       return true;
+     }
+    else {
+       return false;
+     }
+   }
 
 function Slide(width, height, animationPhase) {
   var plane = new THREE.PlaneGeometry(width, height, width * 2, height * 2);
