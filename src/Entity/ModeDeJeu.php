@@ -31,7 +31,7 @@ class ModeDeJeu
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Annonce", mappedBy="modeDeJeu")
      */
-    private $modeDeJeu;
+    private $annonce;
 
     public function __construct()
     {
@@ -93,6 +93,37 @@ class ModeDeJeu
             // set the owning side to null (unless already changed)
             if ($modeDeJeu->getModeDeJeu() === $this) {
                 $modeDeJeu->setModeDeJeu(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Annonce[]
+     */
+    public function getAnnonce(): Collection
+    {
+        return $this->annonce;
+    }
+
+    public function addAnnonce(Annonce $annonce): self
+    {
+        if (!$this->annonce->contains($annonce)) {
+            $this->annonce[] = $annonce;
+            $annonce->setModeDeJeu($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAnnonce(Annonce $annonce): self
+    {
+        if ($this->annonce->contains($annonce)) {
+            $this->annonce->removeElement($annonce);
+            // set the owning side to null (unless already changed)
+            if ($annonce->getModeDeJeu() === $this) {
+                $annonce->setModeDeJeu(null);
             }
         }
 
