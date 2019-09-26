@@ -34,7 +34,7 @@ class Annonce
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Plateforme", inversedBy="annonce")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Plateforme", inversedBy="Annonce")
      * @ORM\JoinColumn(nullable=false)
      */
     private $plateforme;
