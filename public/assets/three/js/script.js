@@ -408,7 +408,7 @@ function createTweenScrubber(tween, seekSpeed) {
       seek(dx);
     }
   });
-  // mobile
+  // mobile a modifier sinon bloque la navigation
   window.addEventListener('touchstart', function(e) {
     _cx = e.touches[0].clientX;
     stop();
