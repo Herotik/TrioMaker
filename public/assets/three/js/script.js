@@ -18,7 +18,7 @@ function init() {
   var slide = new Slide(width, height, 'out');
 	var l1 = new THREE.ImageLoader();
 	l1.setCrossOrigin('Anonymous');
-	l1.load('../../../ressources/images/drake.png', function(img) {
+	l1.load('../../../ressources/images/seasonBG1.jpg', function(img) {
 	  slide.setImage(img);
 	})
   root.scene.add(slide);
