@@ -302,6 +302,8 @@ THREERoot.prototype = {
     this.camera.updateProjectionMatrix();
 
     this.renderer.setSize(window.innerWidth, window.innerHeight);
+    console.log(window.innerWidth);
+    console.log(window.innerHeight);
   }
 };
 
