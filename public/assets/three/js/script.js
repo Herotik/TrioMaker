@@ -417,11 +417,15 @@ function createTweenScrubber(tween, seekSpeed) {
     _cx = e.touches[0].clientX;
     stop();
     e.preventDefault();
+  },{
+      passive : false
   });
   window.addEventListener('touchend', function(e) {
     resume();
     e.preventDefault();
-  });
+  },{
+    passive : false
+});
   window.addEventListener('touchmove', function(e) {
     var cx = e.touches[0].clientX;
     var dx = cx - _cx;
@@ -429,5 +433,7 @@ function createTweenScrubber(tween, seekSpeed) {
 
     seek(dx);
     e.preventDefault();
-  });
+  },{
+    passive : false
+});
 }
