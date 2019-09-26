@@ -390,20 +390,20 @@ function createTweenScrubber(tween, seekSpeed) {
   var mouseDown = false;
   document.body.style.cursor = 'pointer';
 
-  window.addEventListener('mousedown', function(e) {
+  document.getElementById('three-container').addEventListener('mousedown', function(e) {
     mouseDown = true;
     document.body.style.cursor = 'ew-resize';
     _cx = e.clientX;
     stop();
     e.preventDefault();
   });
-  window.addEventListener('mouseup', function(e) {
+  document.getElementById('three-container').addEventListener('mouseup', function(e) {
     mouseDown = false;
     document.body.style.cursor = 'pointer';
     resume();
     e.preventDefault();
   });
-  window.addEventListener('mousemove', function(e) {
+  document.getElementById('three-container').addEventListener('mousemove', function(e) {
     if (mouseDown === true) {
       var cx = e.clientX;
       var dx = cx - _cx;
