@@ -8,6 +8,22 @@
 
 <div id="three-container"> </div>
 {% endblock %}
+<script>
+const Fortnite = require("fortnite-api");
+
+let fortniteAPI = new Fortnite(
+    [
+        "furaxx266@gmail.com",
+        "alex5926",
+        "CLIENT LAUNCHER TOKEN",
+        "FORTNITE CLIENT TOKEN"
+    ]
+);
+
+fortniteAPI.login().then(() => {
+    //YOUR CODE
+});
+</script>
 <script src="./assets/three/js/three.min.js"></script>
 {% block javascripts %}
 {{ encore_entry_script_tags('three') }}
