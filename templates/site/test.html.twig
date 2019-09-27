@@ -11,6 +11,29 @@
 
 
 {% endblock %}
+<script>
+const Fortnite = require("fortnite-api");
+
+let fortniteAPI = new Fortnite(
+    [
+        "alex.mks6@gmail.com",
+        "alex5926",
+        "MzQ0NmNkNzI2OTRjNGE0NDg1ZDgxYjc3YWRiYjIxNDE6OTIwOWQ0YTVlMjVhNDU3ZmI5YjA3NDg5ZDMxM2I0MWE=",
+        "ZWM2ODRiOGM2ODdmNDc5ZmFkZWEzY2IyYWQ4M2Y1YzY6ZTFmMzFjMjExZjI4NDEzMTg2MjYyZDM3YTEzZmM4NGQ="
+    ]
+);
+
+fortniteAPI.login().then(() => {
+    fortniteAPI
+        .checkPlayer("Mirardes", "pc")
+        .then(stats => {
+            console.log(stats);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+});
+</script>
 <script src="./assets/three/js/three.min.js"></script>
 {% block javascripts %}
 {{ encore_entry_script_tags('three') }}
