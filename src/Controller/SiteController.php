@@ -88,22 +88,7 @@ class SiteController extends Controller
 
     public function test(UserInterface $user = null, Annonce $annonce = null, Request $request, ObjectManager $manager)
     {
-        const Fortnite = require("fortnite-api");
-
-let fortniteAPI = new Fortnite(
-    [
-        "alex.mks6@gmail.com",
-        "alex5926",
-        "MzQ0NmNkNzI2OTRjNGE0NDg1ZDgxYjc3YWRiYjIxNDE6OTIwOWQ0YTVlMjVhNDU3ZmI5YjA3NDg5ZDMxM2I0MWE=",
-        "ZWM2ODRiOGM2ODdmNDc5ZmFkZWEzY2IyYWQ4M2Y1YzY6ZTFmMzFjMjExZjI4NDEzMTg2MjYyZDM3YTEzZmM4NGQ="
-    ]
-);
-
-fortniteAPI.login().then(() => {
-    //YOUR CODE
-});
-
-
+        
         return $this->render(
             'site/test.html.twig',array());
     }
